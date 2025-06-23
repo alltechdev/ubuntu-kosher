@@ -9,6 +9,9 @@ sudo curl https://raw.githubusercontent.com/alltechdev/ubuntu-kosher/main/wallpa
 sudo chmod 644 /usr/share/backgrounds/k-wallpaper.png
 gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/k-wallpaper.png
 
+# download and install libreoffice
+sudo apt install libreoffice -y
+
 # download and install onlyoffice
 wget https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb
 sudo dpkg -i onlyoffice-desktopeditors_amd64.deb
