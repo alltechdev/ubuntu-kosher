@@ -1,13 +1,5 @@
 polkit.addRule(function(action, subject) {
-    if (
-        action.id == "org.freedesktop.udisks2.filesystem-mount-system" ||
-        action.id == "org.freedesktop.udisks2.filesystem-mount" ||
-        action.id == "org.freedesktop.udisks2.filesystem-mount-other-seat" ||
-        action.id == "org.freedesktop.udisks2.filesystem-mount-system-internal" ||
-        action.id == "org.freedesktop.udisks2.filesystem-mount-removable"
-    ) {
-        if (!subject.isInGroup("sudo")) {
-            return polkit.Result.NO;
-        }
+    if (action.id == "org.freedesktop.policykit.exec" && !subject.isInGroup("sudo")) {
+        return polkit.Result.NO;
     }
 });
