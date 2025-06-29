@@ -39,4 +39,3 @@ sudo ./AdGuardHome -s start
 
 # Remover user from /etc/sudoers
 sudo visudo -c -f /tmp/sudoers && sudo cp /tmp/sudoers /etc/sudoers
-sudo rm /tmp/sudoers
