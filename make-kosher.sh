@@ -12,6 +12,13 @@ gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgro
 # Remove snap store
 snap remove snap-store
 
+# Set alltech.dev as firefox homepage
+if [ -d "$HOME/snap/firefox/common/.mozilla/firefox" ]; then
+  for profile in "$HOME"/snap/firefox/common/.mozilla/firefox/*.default*; do
+    echo 'user_pref("browser.startup.homepage", "https://alltech.dev");' >> "$profile/user.js"
+  done
+fi
+
 # download and install libreoffice
 sudo apt install libreoffice -y
 
