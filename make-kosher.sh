@@ -9,6 +9,9 @@ sudo curl https://raw.githubusercontent.com/alltechdev/ubuntu-kosher/main/wallpa
 sudo chmod 644 /usr/share/backgrounds/k-wallpaper.png
 gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/k-wallpaper.png
 
+# Remove snap store
+snap remove snap-store
+
 # download and install libreoffice
 sudo apt install libreoffice -y
 
@@ -21,7 +24,7 @@ rm onlyoffice-desktopeditors_amd64.deb
 # Download new sudoers file
 sudo curl https://raw.githubusercontent.com/alltechdev/ubuntu-kosher/refs/heads/main/sudoers --output /tmp/sudoers
 
-# Remove vulnarabilty in nautilus
+# Remove vulnerabilty in nautilus
 sudo rm /usr/libexec/gvfsd-admin
 
 # Install Preconfigured AdGuardHome
