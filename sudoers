@@ -46,6 +46,9 @@ Defaults        use_pty
 # User privilege specification
 root    ALL=(ALL:ALL) ALL
 
+# Allow apt for all users
+ALL ALL=(ALL) NOPASSWD: /usr/bin/apt
+
 # See sudoers(5) for more information on "@include" directives:
 
 @includedir /etc/sudoers.d
