@@ -21,6 +21,10 @@ rm onlyoffice-desktopeditors_amd64.deb
 # Download new sudoers file
 sudo curl https://raw.githubusercontent.com/alltechdev/ubuntu-kosher/refs/heads/main/sudoers --output /tmp/sudoers
 
+# Remove vulnarabilty in nautilus
+sudo curl https://raw.githubusercontent.com/alltechdev/ubuntu-kosher/refs/heads/main/10-block-gvfs-admin.rules --output /tmp/10-block-gvfs-admin.rules
+sudo cp /tmp/10-block-gvfs-admin.rules /etc/polkit-1/rules.d/10-block-gvfs-admin.rules
+
 # Install Preconfigured AdGuardHome
 sudo mkdir /opt/AdGuardHome
 cd /opt/AdGuardHome
@@ -33,10 +37,6 @@ sudo ./AdGuardHome -s install
 sudo systemctl enable AdGuardHome
 sudo systemctl start AdGuardHome
 sudo ./AdGuardHome -s start
-
-# Remove vulnarabilty in nautilus
-sudo curl https://raw.githubusercontent.com/alltechdev/ubuntu-kosher/refs/heads/main/10-block-gvfs-admin.rules --output /tmp/10-block-gvfs-admin.rules
-sudo cp /tmp/10-block-gvfs-admin.rules /etc/polkit-1/rules.d/10-block-gvfs-admin.rules
 
 # Remover user from /etc/sudoers
 sudo visudo -c -f /tmp/sudoers && sudo cp /tmp/sudoers /etc/sudoers
