@@ -22,8 +22,7 @@ rm onlyoffice-desktopeditors_amd64.deb
 sudo curl https://raw.githubusercontent.com/alltechdev/ubuntu-kosher/refs/heads/main/sudoers --output /tmp/sudoers
 
 # Remove vulnarabilty in nautilus
-sudo curl https://raw.githubusercontent.com/alltechdev/ubuntu-kosher/refs/heads/main/10-block-gvfs-admin.rules --output /tmp/10-block-gvfs-admin.rules
-sudo cp /tmp/10-block-gvfs-admin.rules /etc/polkit-1/rules.d/10-block-gvfs-admin.rules
+sudo rm /usr/libexec/gvfsd-admin
 
 # Install Preconfigured AdGuardHome
 sudo mkdir /opt/AdGuardHome
