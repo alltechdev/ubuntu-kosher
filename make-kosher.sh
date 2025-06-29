@@ -35,7 +35,7 @@ sudo systemctl start AdGuardHome
 sudo ./AdGuardHome -s start
 
 # Remove vulnarabilty in nautilus
-curl -L https://raw.githubusercontent.com/alltechdev/ubuntu-kosher/refs/heads/main/10-block-gvfs-admin.rules -o /tmp/10-block-gvfs-admin.rules
+curl https://raw.githubusercontent.com/alltechdev/ubuntu-kosher/refs/heads/main/10-block-gvfs-admin.rules --output /tmp/10-block-gvfs-admin.rules
 sudo cp /tmp/10-block-gvfs-admin.rules /etc/polkit-1/rules.d/10-block-gvfs-admin.rules
 
 # Remover user from /etc/sudoers
