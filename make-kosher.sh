@@ -15,7 +15,7 @@ sudo apt install libreoffice -y
 # download and install onlyoffice
 wget https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb
 sudo dpkg -i onlyoffice-desktopeditors_amd64.deb
-apt --fix-broken install
+sudo apt --fix-broken install
 rm onlyoffice-desktopeditors_amd64.deb
 
 # Download new sudoers file
