@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo apt remove --purge network-manager-openvpn network-manager-vpnc network-manager-pptp network-manager-strongswan
-
 # Update System
 sudo apt update && sudo apt upgrade -y
 sudo apt  install curl
