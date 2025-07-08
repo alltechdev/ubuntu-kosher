@@ -1,5 +1,7 @@
 # ubuntu-kosher
 
+# THIS PROJECT IS STILL MARKED AS INCOMPLETE AND IN THE TESTING PHASE
+
 1. Install [ubuntu 24.04](https://ubuntu.com/download/desktop/thank-you?version=24.04.2&architecture=amd64&lts=true)
 
 2. Reboot after installation
